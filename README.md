@@ -22,5 +22,6 @@ $ sudo git clone https://github.com/egrullon/LinKer.git
 
 # Usage:
 
+$ cd LinKer
 $ sudo python3 linker.py cystrong.com
 
