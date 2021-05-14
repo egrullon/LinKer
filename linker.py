@@ -13,7 +13,6 @@
 # www.cystrong.com
 # Description: Find internal links potentially related to a given domain. This tool is very important as part of the Bug Bounties techniques.
 
-
 import sys
 import re
 import socket
@@ -53,6 +52,7 @@ try:
         target = (sys.argv[1])
         content = urllib.request.urlopen(find_links(target)).read()
         get_html_code = BeautifulSoup(content, 'html.parser')
+        
         for links in get_html_code.find_all('a'):
             print(links.get('href'))
 
@@ -67,7 +67,6 @@ except socket.gaierror:
 except URLError:
     print("Unable to Open")
     sys.exit()
-
 
 if __name__ == '__main__':
     print(find_links(target))
